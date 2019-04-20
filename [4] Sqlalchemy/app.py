@@ -26,4 +26,9 @@ def home():
 
     return render_template('index.html')
 
+@app.route('/Users')
+def users():
+    res = Users.query.all()
+    return render_template('view.html',res =res)
+
 app.run(debug=True)
