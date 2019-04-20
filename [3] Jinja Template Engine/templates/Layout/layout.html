@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/cover.css') }}">
+    <script src="{{ url_for('static',filename='js/jquery-3.2.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/popper.min.js') }}"></script>
+</head>
+
+<body class="text-center">
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">FLASK APP</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link {{ Homeactive }} " href="/">Home</a>
+                <a class="nav-link {{ Aboutactive }}" href="/about">About</a>
+                <a class="nav-link {{ Loginactive }}" href="/login">Login</a>
+                <a class="nav-link {{ Signupactive }}" href="/signup">Signup</a>
+            </nav>
+        </div>
+    </header>
+    {% block body %}
+    {% endblock %}
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p><a> All Rights Reserved BY <b style="color: white;">Apoorv Verma</b></a></p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
