@@ -22,7 +22,7 @@ def home():
         email = request.form.get('email')
         data_entry = Users(name=name,passs=passs,email=email)
         db.session.add(data_entry)
-        db.session.commit()
+        print(db.session.commit())
 
     return render_template('index.html')
 
