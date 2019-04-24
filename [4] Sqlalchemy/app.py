@@ -31,4 +31,13 @@ def users():
     res = Users.query.all()
     return render_template('view.html',res =res)
 
+@app.route('/UserUpdate',methods=['post','get'])
+def UserUpdate():
+    if request.method == 'POST':
+        id = request.form.get('id')
+        name = request.form.get('fname')
+        passs = request.form.get('passs')
+        email = request.form.get('email')
+    return render_template('view.html')
+
 app.run(debug=True)

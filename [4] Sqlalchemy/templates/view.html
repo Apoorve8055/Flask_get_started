@@ -28,6 +28,7 @@
 </thead>
     {% for user in res %}
     <tr>
+        <form action="/UserUpdate" method="post">
         <td>{{ user.id }}</td>
         <td>{{ user.name }}</td>
         <td>{{ user.email }}</td>
@@ -35,6 +36,7 @@
             <button>Edit</button>
             <button>Delete</button>
         </td>
+            </form>
     </tr>
 
     {% endfor %}
